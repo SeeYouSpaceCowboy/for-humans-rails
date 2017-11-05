@@ -1,0 +1,24 @@
+<div class="space"></div>
+
+<h1>Log In</h1>
+
+<%= form_tag '/sessions' do %>
+  <div class="row">
+    <div class="four columns">
+      <%= label_tag :username %>
+      <%= text_field_tag 'user[username]', nil, class: "u-full-width"  %>
+      <%= label_tag :password %>
+      <%= password_field_tag 'user[password]', nil, class: "u-full-width"  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="two columns">
+      <%= submit_tag "Log In", class: "button-primary u-full-width" %>
+    </div>
+
+    <div class="two columns">
+      <%= link_to '<button class="u-full-width" type="button">Sign Up</button>'.html_safe, new_user_path %>
+    </div>
+  </div>
+<% end %>

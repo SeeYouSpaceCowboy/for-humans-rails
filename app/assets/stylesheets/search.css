@@ -1,0 +1,20 @@
+.search-results {
+  border: solid;
+  border-color: #bbb;
+  border-width: 0 0 1px 0;
+  margin-bottom: 1em;
+  min-height: 8em;
+}
+
+.search-bar {
+  margin-right: 1em;
+  margin-top: 0.1em;
+  width: 85%;
+}
+
+.search-img {
+  max-height: 10em;
+  width: 10em;
+  float: left;
+  margin-right: 2em;
+}

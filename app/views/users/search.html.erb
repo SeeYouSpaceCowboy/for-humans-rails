@@ -1,0 +1,11 @@
+<% if !!@users %>
+  <% @users.each do |user| %>
+    <div class="search-results">
+      <%= image_tag(user.img_url, class: "search-img") %>
+      <h4><%= link_to user.to_s, user %></h4>
+      <p>Age <%= user.age %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>Sorry, No results.<p>
+<% end %>

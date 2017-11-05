@@ -1,0 +1,35 @@
+<div class="space"></div>
+<h1>Sign Up</h1>
+
+<% if flash[:notice] %>
+  <% flash[:notice].each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div class="row">
+    <div class="four columns">
+      <%= f.label "Username" %>
+      <%= f.text_field :username, class: "u-full-width" %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "u-full-width" %>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class: "u-full-width"  %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "u-full-width"  %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "u-full-width"  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="two columns">
+      <%= f.submit "Sign Up", class: "button-primary u-full-width" %>
+    </div>
+
+    <div class="two columns">
+      <%= link_to '<button class="u-full-width" type="button">Log In</button>'.html_safe, login_path %>
+    </div>
+  </div>
+<% end %>

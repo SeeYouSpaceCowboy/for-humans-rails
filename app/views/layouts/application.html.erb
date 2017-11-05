@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>For Humans</title>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'logo.ico' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <% if logged_in? %>
+      <nav class="navbar">
+        <div class="row">
+          <ul class="navbar-list">
+            <div class="one column">
+              <li class="navbar-item">
+                <a class="navbar-link" href="/users/<%= current_user.id %>">
+                  <%= image_tag("logo.svg", alt: 'Home', class: 'navbar-img')%>
+                </a>
+              </li>
+            </div>
+
+            <div class="one column">
+              <li class="navbar-item">
+                <a class="navbar-link" href="/about"><div class="navbar-text">About</div></a>
+              </li>
+            </div>
+
+            <div class="nine columns">
+              <%= form_tag '/search' do %>
+                <p>
+                  <%= text_field_tag :search, params[:search], placeholder: 'Look for . . .', class: 'search-bar'%>
+                  <%= submit_tag "Search", :name => nil %>
+                </p>
+              <% end %>
+            </div>
+
+            <div class="one column">
+              <li class="navbar-item">
+                <a class="navbar-link" href="/logout"><%= image_tag("logout.svg", alt: 'Log Out', class: 'navbar-img')%></a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    <% end %>
+
+    <div class="container"><%= yield %></div>
+  </body>
+</html>

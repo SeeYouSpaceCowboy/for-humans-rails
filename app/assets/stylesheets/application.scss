@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require normalize.css
+ *= require skeleton.css
+ *= require_tree .
+ *= require_self
+ */
+
+ input[type='text']
+ {
+ }
+
+.space {
+  height: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.inline-link {
+  color: #3498db;
+}
+
+.columns {
+  overflow: hidden;
+}
+
+.navbar {
+  border: solid;
+  border-color: #bbb;
+  border-width: 0 0 1px 0;
+  margin-bottom: 3em;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin: 2em 2em 1em 2em;
+}
+
+.navbar-item {
+  display: inline;
+}
+
+.navbar-text {
+  margin-top: 0.75em;
+}
+
+.navbar-img {
+  max-height: 2em;
+  margin-top: 0.5em;
+}

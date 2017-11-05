@@ -1,0 +1,28 @@
+h6 {
+  font-weight: bold;
+}
+
+.post {
+  border-bottom: solid thin #D1D1D1;
+  margin-bottom: 2em;
+}
+
+.post-thumbnail {
+  width: 6em;
+}
+
+.post-img {
+  display: inline-block;
+  margin-right: 1em;
+  float: left;
+}
+
+.post-description {
+  display: inline-block;
+  width: 77%;
+}
+
+#post-area {
+  resize: none;
+  height: 6em;
+}

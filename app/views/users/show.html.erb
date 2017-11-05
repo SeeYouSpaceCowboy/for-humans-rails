@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="seven columns">
+    <%= form_for @post do |f| %>
+      <%= f.text_area :description, class: "u-full-width", id: "post-area" %>
+      <%= f.submit :post, class: "button-primary" %>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <% flash[:notice].each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    <% end %>
+
+    <% if @user.posts.all.length > 0 %>
+      <% @user.posts.all.reverse.each do |post| %>
+        <div class="post">
+          <% poster = User.find(post.user_id) %>
+          <div class='post-img'>
+            <%= image_tag(poster.img_url, class: 'post-thumbnail') %>
+          </div>
+
+          <div class='post-description'>
+            <h6><%= link_to poster.to_s, poster %></h6>
+            <p><%= post.description %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="five columns">
+    <div class="row">
+      <img id="user-img" src="<%=@user.img_url%>" >
+    </div>
+
+    <div class="row">
+      <h3><%= @user.to_s %></h3>
+      <% if current_user.id == @user.id %>
+        <%= link_to '<button type="button">Edit</button>'.html_safe, edit_user_path(current_user) %>
+      <% else %>
+        <button class="button-primary" type="button">Follow</button>
+      <% end %>
+      <p>Lives in <%= @user.zipcode %></p>
+      <p>Age <%= @user.age %></p>
+    </div>
+  </div>
+</div>
