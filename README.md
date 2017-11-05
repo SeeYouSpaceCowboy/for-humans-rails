@@ -43,8 +43,5 @@ WhereTo consists of a front-end and a back-end. For this project to run you have
 
 If haven't already, you should now clone and install the back-end of this project; instructions [here](https://github.com/SeeYouSpaceCowboy/yelp-search-nodejs.git).
 
-## Built With
-* [Create React App](https://github.com/facebookincubator/create-react-app) - Create React apps with no build configuration.
-
 ## Contributors
 WhereTo was built by [Mohammed Chisti](http://mohammedchisti.com).
