@@ -36,12 +36,7 @@ Open terminal and run the following lines of code to clone and run this project.
  $ npm i
  $ npm start
  ```
- This project should now be running locally on port `3000`.
-
-### Installing the Back-end
-WhereTo consists of a front-end and a back-end. For this project to run you have to have both projects installed and running locally at the same time.
-
-If haven't already, you should now clone and install the back-end of this project; instructions [here](https://github.com/SeeYouSpaceCowboy/yelp-search-nodejs.git).
+ This project should now be running locally on port `3500`.
 
 ## Contributors
 WhereTo was built by [Mohammed Chisti](http://mohammedchisti.com).
