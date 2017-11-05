@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src=""
+    src="https://user-images.githubusercontent.com/7621982/32417579-9f36cc7e-c229-11e7-8f36-add9295e60d3.png"
     alt="For Humans Rails"
     width="30" />
 </p>
@@ -11,11 +11,11 @@
 
 <p align="center">
   <img
-    src=""
+    src="https://user-images.githubusercontent.com/7621982/32417551-453dcb8c-c229-11e7-89ff-c1409b1b5207.png"
     alt="Screenshot of For Humans"
     width="700" />
     </br>
-    Minimal social media skeleton.
+    Minimal social media skeleton
 </p>
 
 ## Getting Started with For Humans
